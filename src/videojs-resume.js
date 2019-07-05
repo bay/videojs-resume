@@ -1,5 +1,5 @@
-import videojs from 'video.js';
-import store from 'store';
+const videojs = require('video.js');
+const store = require('store');
 const Button = videojs.getComponent('Button');
 const Component = videojs.getComponent('Component');
 const ModalDialog = videojs.getComponent('ModalDialog');
