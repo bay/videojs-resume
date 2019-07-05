@@ -23,10 +23,16 @@ class ResumeButton extends Button {
   }
 
   handleClick() {
-    this.player_.resumeModal.close();
-    this.player_.currentTime(this.resumeFromTime);
-    this.player_.play();
-    this.player_.trigger('resumevideo');
+    this.player.resumeModal.close();
+    var resumeFromTime = this.resumeFromTime;
+    this.player.on('loadeddata', function(){
+      if (this.currentTime() < 1) {
+        this.currentTime(resumeFromTime);
+      }
+    });
+    this.player.currentTime(resumeFromTime);
+    this.player.play();
+    this.player.trigger('resumevideo');
   }
 
   handleKeyPress(event) {
