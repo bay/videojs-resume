@@ -17,13 +17,13 @@
   "author": "Shawn Price",
   "license": "Apache-2.0",
   "devDependencies": {
-    "babelify": "6.3.0",
-    "browserify": "11.1.0",
-    "browserify-shim": "3.8.10",
-    "node-sass": "3.4.2",
-    "uglify-js": "2.6.1",
-    "video.js": "5.5.3",
-    "store": "1.3.17"
+    "babelify": "^8.0.0",
+    "browserify": "16.2.3",
+    "browserify-shim": "3.8.14",
+    "node-sass": "4.12.0",
+    "store": "2.0.12",
+    "uglify-js": "3.6.0",
+    "video.js": "7.5.5"
   },
   "browserify": {
     "transform": [
@@ -34,5 +34,8 @@
   "browserify-shim": {
     "video.js": "global:videojs",
     "store": "global:store"
+  },
+  "dependencies": {
+    "babel-core": "^6.26.3"
   }
 }
