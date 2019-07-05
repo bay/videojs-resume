@@ -61,7 +61,7 @@ class ResumeCancelButton extends Button {
     store.remove(this.options_.key);
   }
 }
-ResumeButton.prototype.controlText_ = 'No Thanks';
+ResumeCancelButton.prototype.controlText_ = 'No Thanks';
 
 class ModalButtons extends Component {
 
