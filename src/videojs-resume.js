@@ -159,4 +159,5 @@ const Resume = function(options) {
   });
 };
 
-videojs.plugin('Resume', Resume);
+let registerPlugin = videojs.registerPlugin || videojs.plugin;
+registerPlugin('Resume', Resume);
