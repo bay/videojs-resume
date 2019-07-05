@@ -4,10 +4,11 @@
   "description": "Resume playback in VideoJS",
   "main": "dist/videojs-resume.min.js",
   "scripts": {
-    "build": "npm run sass; npm run build-dist; npm run uglify",
+    "build": "npm run sass; npm run build-dist; npm run terser",
     "sass": "mkdir -p dist/ && ./node_modules/.bin/node-sass --output-style compact ./src/videojs-resume.css dist/videojs-resume.min.css",
     "build-dist": "mkdir -p dist/ && ./node_modules/.bin/browserify ./src/videojs-resume.js  -o dist/videojs-resume.js",
-    "uglify": "./node_modules/.bin/uglifyjs dist/videojs-resume.js --compress -o dist/videojs-resume.min.js"
+    "uglify": "./node_modules/.bin/uglifyjs dist/videojs-resume.js --compress -o dist/videojs-resume.min.js",
+    "terser": "./node_modules/.bin/terser dist/videojs-resume.js --compress -o dist/videojs-resume.min.js"
   },
   "keywords": [
     "videojs",
@@ -36,6 +37,7 @@
     "store": "global:store"
   },
   "dependencies": {
-    "babel-core": "^6.26.3"
+    "babel-core": "^6.26.3",
+    "terser": "^4.0.2"
   }
 }
